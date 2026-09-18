@@ -42,6 +42,10 @@ what turns an MCP server's tool list into the `tools` array we already send, and
 out to the right server. That's the same loop we've been building all along - MCP just standardises where the tool
 definitions come from.
 
+The two aren't mutually exclusive, either. At any moment a harness can expose any number of hand-written tools and
+any number of MCP tools - including none of either - and the model sees the lot as a single `tools` list. We're not
+choosing between MCP and "normal" tools; they sit side by side.
+
 ## Benefits of MCP
 
 Online services can offer MCP servers to let agents interact with them on your behalf. This ranges from
