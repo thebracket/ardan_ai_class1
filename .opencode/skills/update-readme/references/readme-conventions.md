@@ -69,6 +69,7 @@ Rows follow the order of `[workspace] members` in `code/Cargo.toml`.
 | `ex10_tools_params` | `02_llm_call/tools_4.md` | A parameterised tool (`roll_dice` with a `sides` argument) |
 | `ex11_bash_tool` | `02_llm_call/tools_5.md` | The deliberately unsafe `bash` tool, confined to a container |
 | `ex12_docker_safety` | `02_llm_call/tools_docker.md` | A non-root container refusing a file read, and the error reaching the model |
+| `ex13_bwrap_sandbox` | `02_llm_call/tools_bwrap.md` | The `bash` tool wrapped in a Bubblewrap sandbox, with a Docker fallback for non-Linux hosts |
 
 When this table changes, update it here too.
 

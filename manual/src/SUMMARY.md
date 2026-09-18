@@ -25,7 +25,7 @@
     - [DANGER Will Robinson](./02_llm_call/tools_5.md)
     - [Safety Options for Tools](./02_llm_call/tools_6.md)
       - [Containers - Docker](./02_llm_call/tools_docker.md)
-      - [Sandboxes - Bubblewrap]()
+      - [Sandboxes - Bubblewrap](./02_llm_call/tools_bwrap.md)
     - [Prompt Injection]()
     - [Governance]()
   - [MCP Server Use]()
