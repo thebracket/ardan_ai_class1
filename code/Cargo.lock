@@ -431,6 +431,38 @@ dependencies = [
 ]
 
 [[package]]
+name = "ex14_injection"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "colored",
+ "dotenvy",
+ "futures-util",
+ "rand",
+ "reqwest",
+ "reqwest-sse",
+ "serde",
+ "serde_json",
+ "tokio",
+]
+
+[[package]]
+name = "ex15_provenance"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "colored",
+ "dotenvy",
+ "futures-util",
+ "rand",
+ "reqwest",
+ "reqwest-sse",
+ "serde",
+ "serde_json",
+ "tokio",
+]
+
+[[package]]
 name = "find-msvc-tools"
 version = "0.1.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"

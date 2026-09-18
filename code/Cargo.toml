@@ -6,4 +6,4 @@ edition = "2024"
 [dependencies]
 
 [workspace]
-members = ["ex01_hello", "ex02_simple_request", "ex03_streaming", "ex04_streaming", "ex05_streaming", "ex06_refactor", "ex07_multi_turn", "ex08_tools", "ex09_tools_generic", "ex10_tools_params", "ex11_bash_tool", "ex12_docker_safety", "ex13_bwrap_sandbox"]
+members = ["ex01_hello", "ex02_simple_request", "ex03_streaming", "ex04_streaming", "ex05_streaming", "ex06_refactor", "ex07_multi_turn", "ex08_tools", "ex09_tools_generic", "ex10_tools_params", "ex11_bash_tool", "ex12_docker_safety", "ex13_bwrap_sandbox", "ex14_injection", "ex15_provenance"]

@@ -12,7 +12,7 @@
 ```text
 code/
   Cargo.toml            # workspace; every exNN crate is a member
-  ex01_hello/ ... ex13_bwrap_sandbox/
+  ex01_hello/ ... ex15_provenance/
     Cargo.toml
     src/main.rs         # some also have src/chatbot.rs
     .env                # local only, gitignored (contains OPENROUTER_KEY)
@@ -62,6 +62,8 @@ mdbook build manual
 | [`ex11_bash_tool`](code/ex11_bash_tool) | [DANGER Will Robinson](manual/src/02_llm_call/tools_5.md) | The deliberately unsafe `bash` tool, confined to a container |
 | [`ex12_docker_safety`](code/ex12_docker_safety) | [Containers - Docker](manual/src/02_llm_call/tools_docker.md) | A non-root container refusing a file read, and the error reaching the model |
 | [`ex13_bwrap_sandbox`](code/ex13_bwrap_sandbox) | [Sandboxes - Bubblewrap](manual/src/02_llm_call/tools_bwrap.md) | The `bash` tool wrapped in a Bubblewrap sandbox, with a Docker fallback for non-Linux hosts |
+| [`ex14_injection`](code/ex14_injection) | [Prompt Injection Example](manual/src/02_llm_call/prompt_injection_2.md) | A harmless weather tool that smuggles a pirate instruction into the conversation |
+| [`ex15_provenance`](code/ex15_provenance) | [Provenance](manual/src/02_llm_call/provenance.md) | Explicit and enforced provenance: refusing privileged tools after untrusted data |
 
 ## Contents
 
@@ -90,12 +92,19 @@ The full table of contents is [`manual/src/SUMMARY.md`](manual/src/SUMMARY.md).
     - [Generic Tool Calls](manual/src/02_llm_call/tools_3.md)
     - [Tool Calls with Parameters](manual/src/02_llm_call/tools_4.md)
     - [DANGER Will Robinson](manual/src/02_llm_call/tools_5.md)
-    - [Safety Options for Tools](manual/src/02_llm_call/tools_6.md)
-      - [Containers - Docker](manual/src/02_llm_call/tools_docker.md)
-      - [Sandboxes - Bubblewrap](manual/src/02_llm_call/tools_bwrap.md)
-    - Prompt Injection (placeholder)
-    - Governance (placeholder)
+      - [Safety Options for Tools](manual/src/02_llm_call/tools_6.md)
+        - [Containers - Docker](manual/src/02_llm_call/tools_docker.md)
+        - [Sandboxes - Bubblewrap](manual/src/02_llm_call/tools_bwrap.md)
+      - Governance (placeholder)
+    - Structured Output from Tools (placeholder)
   - MCP Server Use (placeholder)
+  - Structured AI Call Output (placeholder)
+  - [Prompt Injection](manual/src/02_llm_call/prompt_injection.md)
+    - [Prompt Injection Example](manual/src/02_llm_call/prompt_injection_2.md)
+    - [Provenance](manual/src/02_llm_call/provenance.md)
+      - [Explicit Provenance](manual/src/02_llm_call/provenance_explicit.md)
+      - [Enforced Provenance](manual/src/02_llm_call/provenance_enforced.md)
+      - [What Provenance Buys You](manual/src/02_llm_call/provenance_takeaways.md)
   - Make a Library (placeholder)
   - Wrap Up (placeholder)
 - Writing MCP Servers (placeholder)

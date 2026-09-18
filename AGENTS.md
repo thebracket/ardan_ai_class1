@@ -128,7 +128,10 @@ for any safe template) over listing individual paths, so nothing is missed.
   "extra-annotated" versions while the code in `code/` is the cleaner one — keep
   the repo examples readable but not over-commented relative to the prose.
 - The model is `deepseek/deepseek-v4.1-flash`, with `"reasoning": { "enabled": true }`
-  so reasoning deltas can be shown in green via the `colored` crate.
+  so reasoning deltas can be shown in green via the `colored` crate. The one
+  deliberate exception is `ex14_injection`, which uses `google/gemma-3-12b-it` so
+  the prompt-injection demo actually lands (see `prompt_injection_2.md`); don't
+  "fix" it back.
 - Streaming examples use `reqwest-sse`'s `.events()` and `futures_util::StreamExt`.
 - Tool-call handling differentiates `ToolFactory` (ex09) and `merge_tool_call`
   (ex08/ex09) intentionally; those are advanced examples, but comments still need

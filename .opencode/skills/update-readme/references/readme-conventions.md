@@ -70,6 +70,8 @@ Rows follow the order of `[workspace] members` in `code/Cargo.toml`.
 | `ex11_bash_tool` | `02_llm_call/tools_5.md` | The deliberately unsafe `bash` tool, confined to a container |
 | `ex12_docker_safety` | `02_llm_call/tools_docker.md` | A non-root container refusing a file read, and the error reaching the model |
 | `ex13_bwrap_sandbox` | `02_llm_call/tools_bwrap.md` | The `bash` tool wrapped in a Bubblewrap sandbox, with a Docker fallback for non-Linux hosts |
+| `ex14_injection` | `02_llm_call/prompt_injection_2.md` | A harmless weather tool that smuggles a pirate instruction into the conversation |
+| `ex15_provenance` | `02_llm_call/provenance.md` | Explicit and enforced provenance: refusing privileged tools after untrusted data |
 
 When this table changes, update it here too.
 
