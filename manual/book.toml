@@ -9,5 +9,13 @@ title = "Rust/AI Workshop"
 [rust]
 edition = "2024"
 
+[output.html]
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
+
 [output.html.playground]
 editable = true
+
+[preprocessor]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"

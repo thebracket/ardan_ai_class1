@@ -31,12 +31,13 @@ cd ardan_ai_class1
 ```
 
 ```bash
-cargo install mdbook
+cargo install mdbook mdbook-mermaid
 cd manual
 mdbook serve --open
 ```
 
-and, for a static build, `mdbook build manual`.
+and, for a static build, `mdbook build manual`. Diagrams are Mermaid blocks
+rendered by `mdbook-mermaid`; the runtime is vendored in `manual/`.
 
 ## Examples table
 
