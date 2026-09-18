@@ -113,6 +113,7 @@ The full table of contents is [`manual/src/SUMMARY.md`](manual/src/SUMMARY.md).
     - [Remote Servers over Streamable HTTP](manual/src/02_llm_call/mcp_use_10.md)
       - [A Free Remote Server to Test Against](manual/src/02_llm_call/mcp_use_11.md)
       - [Auth, Sessions and Spec Churn](manual/src/02_llm_call/mcp_use_12.md)
+    - [Too Many Tools](manual/src/02_llm_call/mcp_use_tool_bloat.md)
     - [MCP Security and Provenance](manual/src/02_llm_call/mcp_use_13.md)
   - Structured AI Call Output (placeholder)
   - [Prompt Injection](manual/src/02_llm_call/prompt_injection.md)
