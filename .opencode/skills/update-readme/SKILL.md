@@ -60,8 +60,8 @@ it to the sections above.
   `manual/src/02_llm_call/tools_5.md` and `code/ex11_bash_tool`.
 - Placeholders are plain text with a trailing ` (placeholder)` — never a broken
   link, and never an empty link.
-- Mirror `SUMMARY.md` spelling exactly, including apparent typos (for example
-  "Sandboxes - Bubblewap"). Do not silently correct them; ask first.
+- Mirror `SUMMARY.md` spelling exactly, including apparent typos. Do not silently
+  correct them; ask first.
 - Keep the prose terse. Tables and lists, not paragraphs.
 
 ## Secrets

@@ -82,5 +82,4 @@ chapters.
 
 ## Known intentional quirks
 
-- `Sandboxes - Bubblewap` is reproduced from `SUMMARY.md` with the typo intact.
 - `MCP Server Use`, `Make a Library`, `Wrap Up`, etc. are placeholders.
