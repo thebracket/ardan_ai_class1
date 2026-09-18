@@ -89,4 +89,4 @@ chapters.
 
 ## Known intentional quirks
 
-- `MCP Server Use`, `Make a Library`, `Wrap Up`, etc. are placeholders.
+- `Make a Library`, `Wrap Up`, etc. are placeholders.
