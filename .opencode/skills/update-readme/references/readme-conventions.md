@@ -72,6 +72,7 @@ Rows follow the order of `[workspace] members` in `code/Cargo.toml`.
 | `ex13_bwrap_sandbox` | `02_llm_call/tools_bwrap.md` | The `bash` tool wrapped in a Bubblewrap sandbox, with a Docker fallback for non-Linux hosts |
 | `ex14_injection` | `02_llm_call/prompt_injection_2.md` | A harmless weather tool that smuggles a pirate instruction into the conversation |
 | `ex15_provenance` | `02_llm_call/provenance.md` | Explicit and enforced provenance: refusing privileged tools after untrusted data |
+| `ex16_structured` | `02_llm_call/tools_structured.md` | Returning structured data from a tool so the model reads fields, not prose |
 
 When this table changes, update it here too.
 

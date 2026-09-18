@@ -12,7 +12,7 @@
 ```text
 code/
   Cargo.toml            # workspace; every exNN crate is a member
-  ex01_hello/ ... ex15_provenance/
+  ex01_hello/ ... ex16_structured/
     Cargo.toml
     src/main.rs         # some also have src/chatbot.rs
     .env                # local only, gitignored (contains OPENROUTER_KEY)
@@ -64,6 +64,7 @@ mdbook build manual
 | [`ex13_bwrap_sandbox`](code/ex13_bwrap_sandbox) | [Sandboxes - Bubblewrap](manual/src/02_llm_call/tools_bwrap.md) | The `bash` tool wrapped in a Bubblewrap sandbox, with a Docker fallback for non-Linux hosts |
 | [`ex14_injection`](code/ex14_injection) | [Prompt Injection Example](manual/src/02_llm_call/prompt_injection_2.md) | A harmless weather tool that smuggles a pirate instruction into the conversation |
 | [`ex15_provenance`](code/ex15_provenance) | [Provenance](manual/src/02_llm_call/provenance.md) | Explicit and enforced provenance: refusing privileged tools after untrusted data |
+| [`ex16_structured`](code/ex16_structured) | [Structured Output from Tools](manual/src/02_llm_call/tools_structured.md) | Returning structured data from a tool so the model reads fields, not prose |
 
 ## Contents
 

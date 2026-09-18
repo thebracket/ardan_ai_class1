@@ -9,7 +9,7 @@ the machine.
 A workshop taught live. There are two halves that are deliberately kept in sync:
 
 - **`code/`** — a Rust cargo workspace of progressive examples, `ex01_hello`
-  through `ex15_provenance`. Each example is a snapshot of where the class
+  through `ex16_structured`. Each example is a snapshot of where the class
   should be at that point in the lesson.
 - **`manual/`** — an [mdBook](https://rust-lang.github.io/mdBook/). `manual/src/`
   is the source; `manual/book/` is generated output (gitignored). Students keep a
@@ -57,7 +57,7 @@ Manual chapter → code correspondence:
 | `02_llm_call/tools_2.md`                | `ex08_tools`             | Hard-coded `get_time` tool             |
 | `02_llm_call/tools_3.md`                | `ex09_tools_generic`     | `ToolFactory` trait / `ToolDefinition` |
 | `02_llm_call/tools_4.md`                | `ex10_tools_params`      | Parameterised tool (`roll_dice`)       |
-| `02_llm_call/tools_structured.md`       | —                        | Structured output from tools (WIP)     |
+| `02_llm_call/tools_structured.md`       | `ex16_structured`        | Structured tool output / keep decisions in code |
 | `02_llm_call/tools_5.md`                | `ex11_bash_tool`         | Deliberately unsafe `bash` tool        |
 | `02_llm_call/tools_6.md`                | —                        | Safety options: the four axes          |
 | `02_llm_call/tools_docker.md`           | `ex12_docker_safety`     | Non-root container refuses a read      |
@@ -78,7 +78,7 @@ placeholders; don't assume the table is complete.
 code/
   Cargo.toml            # workspace; every exNN crate is a member
   src/main.rs           # stub that tells you to run a workshop member
-  ex01_hello/ ... ex15_provenance/
+  ex01_hello/ ... ex16_structured/
     Cargo.toml
     src/main.rs         # some also have src/chatbot.rs
     .env                # local only, gitignored (contains OPENROUTER_KEY)

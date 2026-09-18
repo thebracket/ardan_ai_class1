@@ -463,6 +463,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "ex16_structured"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "colored",
+ "dotenvy",
+ "futures-util",
+ "rand",
+ "reqwest",
+ "reqwest-sse",
+ "serde",
+ "serde_json",
+ "tokio",
+]
+
+[[package]]
 name = "find-msvc-tools"
 version = "0.1.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
