@@ -1,0 +1,30 @@
+# -----------------------------------------------------------------------------
+# Secrets — never commit these
+# -----------------------------------------------------------------------------
+# Any .env file in any directory (each example keeps its own with OPENROUTER_KEY).
+.env
+.env.*
+# ...but keep templates, which contain no secrets.
+!.env.example
+
+# Common key/certificate material, just in case.
+*.pem
+*.key
+*.p12
+
+# -----------------------------------------------------------------------------
+# Rust build output
+# -----------------------------------------------------------------------------
+# Matches any `target/` directory (the workspace root is `code/`).
+target/
+
+# -----------------------------------------------------------------------------
+# mdBook compiled output
+# -----------------------------------------------------------------------------
+# `manual/src/` is the source; `manual/book/` is generated.
+/manual/book/
+
+# -----------------------------------------------------------------------------
+# Editor / OS noise
+# -----------------------------------------------------------------------------
+.DS_Store

@@ -1,0 +1,13 @@
+[book]
+authors = ["Herbert Wolverson"]
+language = "en"
+src = "src"
+title = "Rust/AI Workshop"
+
+# The examples all target Rust edition 2024, so the "Run" links in the
+# `rust` code blocks should open the playground in the same edition.
+[rust]
+edition = "2024"
+
+[output.html.playground]
+editable = true
