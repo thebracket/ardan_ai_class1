@@ -68,10 +68,8 @@ Manual chapter → code correspondence:
 `multi_1.md`, `tools_1.md`, `tools_6.md`, and `prompt_injection.md` are conceptual
 and reference no example. `provenance*.md` is the `provenance.md` parent plus its
 three sub-pages (`provenance_explicit.md`, `provenance_enforced.md`, and
-`provenance_takeaways.md`). `tools_3.md` describes the generic tools refactor
-(`ex09_tools_generic`) but does not currently link to it — worth fixing if you
-touch that page. `Structured Output from Tools`, `Structured AI Call Output`, and
-`Governance` are placeholders; don't assume the table is complete.
+`provenance_takeaways.md`). `Structured Output from Tools`, `Structured AI Call
+Output`, and `Governance` are placeholders; don't assume the table is complete.
 
 ## Repo layout and build commands
 
