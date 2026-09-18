@@ -7,15 +7,15 @@ description: Keep the repository README in sync with the example crates and mdBo
 
 The repository `README.md` is deliberately minimal. It contains only:
 
-1. Title + Ardan Labs logo
+1. Title + Ardan Labs logo + the "Work in progress" blockquote
 2. `## Repository Layout`
 3. `## Getting the Code`
 4. `## Viewing the Manual`
 5. `## Examples` (table)
 6. `## Contents` (mirrors `SUMMARY.md`, with placeholders marked)
 
-Do **not** add a preamble, a work-in-progress note, or extra explanation. Keep
-it to the sections above.
+Do **not** add any other preamble or extra explanation beyond the
+"Work in progress" blockquote. Keep it to the sections above.
 
 ## When to use
 

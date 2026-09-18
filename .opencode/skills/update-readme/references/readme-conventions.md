@@ -6,14 +6,15 @@ The README has these sections, in this order, and nothing else:
 
 1. `# Rust/AI Workshop`
 2. `![Ardan Labs](./manual/src/ardanlabs-logo.png)`
-3. `## Repository Layout`
-4. `## Getting the Code`
-5. `## Viewing the Manual`
-6. `## Examples`
-7. `## Contents`
+3. The "Work in progress" blockquote (keep this; do not remove it)
+4. `## Repository Layout`
+5. `## Getting the Code`
+6. `## Viewing the Manual`
+7. `## Examples`
+8. `## Contents`
 
-The file ends after Contents. There is no introduction, no status note, and no
-separate "running", "model", or "secrets" section.
+The file ends after Contents. There is no other introduction, no extra status
+note, and no separate "running", "model", or "secrets" section.
 
 ## Repository Layout
 

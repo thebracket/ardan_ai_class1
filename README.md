@@ -2,6 +2,11 @@
 
 ![Ardan Labs](./manual/src/ardanlabs-logo.png)
 
+> **Work in progress.** This is the live-teaching material for the Ardan Labs
+> Rust/AI workshop. The `code/` examples are further along than the `manual/`
+> prose; chapters that are still being written are marked *(placeholder)* below.
+> Feedback very welcome.
+
 ## Repository Layout
 
 ```text
