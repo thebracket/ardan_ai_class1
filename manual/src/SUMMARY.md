@@ -22,7 +22,7 @@
     - [Hard-Coded Tool](./02_llm_call/tools_2.md)
     - [Generic Tool Calls](./02_llm_call/tools_3.md)
     - [Tool Calls with Parameters](./02_llm_call/tools_4.md)
-    - [Structured Output from Tools]()
+    - [Structured Output from Tools](./02_llm_call/tools_structured.md)
     - [DANGER Will Robinson](./02_llm_call/tools_5.md)
       - [Safety Options for Tools](./02_llm_call/tools_6.md)
         - [Containers - Docker](./02_llm_call/tools_docker.md)

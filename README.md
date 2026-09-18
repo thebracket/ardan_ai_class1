@@ -91,7 +91,7 @@ The full table of contents is [`manual/src/SUMMARY.md`](manual/src/SUMMARY.md).
     - [Hard-Coded Tool](manual/src/02_llm_call/tools_2.md)
     - [Generic Tool Calls](manual/src/02_llm_call/tools_3.md)
     - [Tool Calls with Parameters](manual/src/02_llm_call/tools_4.md)
-    - Structured Output from Tools (placeholder)
+    - [Structured Output from Tools](manual/src/02_llm_call/tools_structured.md)
     - [DANGER Will Robinson](manual/src/02_llm_call/tools_5.md)
       - [Safety Options for Tools](manual/src/02_llm_call/tools_6.md)
         - [Containers - Docker](manual/src/02_llm_call/tools_docker.md)

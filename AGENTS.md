@@ -57,6 +57,7 @@ Manual chapter → code correspondence:
 | `02_llm_call/tools_2.md`                | `ex08_tools`             | Hard-coded `get_time` tool             |
 | `02_llm_call/tools_3.md`                | `ex09_tools_generic`     | `ToolFactory` trait / `ToolDefinition` |
 | `02_llm_call/tools_4.md`                | `ex10_tools_params`      | Parameterised tool (`roll_dice`)       |
+| `02_llm_call/tools_structured.md`       | —                        | Structured output from tools (WIP)     |
 | `02_llm_call/tools_5.md`                | `ex11_bash_tool`         | Deliberately unsafe `bash` tool        |
 | `02_llm_call/tools_6.md`                | —                        | Safety options: the four axes          |
 | `02_llm_call/tools_docker.md`           | `ex12_docker_safety`     | Non-root container refuses a read      |
@@ -68,8 +69,8 @@ Manual chapter → code correspondence:
 `multi_1.md`, `tools_1.md`, `tools_6.md`, and `prompt_injection.md` are conceptual
 and reference no example. `provenance*.md` is the `provenance.md` parent plus its
 three sub-pages (`provenance_explicit.md`, `provenance_enforced.md`, and
-`provenance_takeaways.md`). `Structured Output from Tools`, `Structured AI Call
-Output`, and `Governance` are placeholders; don't assume the table is complete.
+`provenance_takeaways.md`). `Structured AI Call Output` and `Governance` are
+placeholders; don't assume the table is complete.
 
 ## Repo layout and build commands
 
