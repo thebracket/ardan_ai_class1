@@ -68,6 +68,7 @@ Rows follow the order of `[workspace] members` in `code/Cargo.toml`.
 | `ex09_tools_generic` | `02_llm_call/tools_3.md` | A `ToolFactory` trait and reusable `ToolDefinition` |
 | `ex10_tools_params` | `02_llm_call/tools_4.md` | A parameterised tool (`roll_dice` with a `sides` argument) |
 | `ex11_bash_tool` | `02_llm_call/tools_5.md` | The deliberately unsafe `bash` tool, confined to a container |
+| `ex12_docker_safety` | `02_llm_call/tools_docker.md` | A non-root container refusing a file read, and the error reaching the model |
 
 When this table changes, update it here too.
 

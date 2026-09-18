@@ -12,7 +12,7 @@
 ```text
 code/
   Cargo.toml            # workspace; every exNN crate is a member
-  ex01_hello/ ... ex11_bash_tool/
+  ex01_hello/ ... ex12_docker_safety/
     Cargo.toml
     src/main.rs         # some also have src/chatbot.rs
     .env                # local only, gitignored (contains OPENROUTER_KEY)
@@ -60,6 +60,7 @@ mdbook build manual
 | [`ex09_tools_generic`](code/ex09_tools_generic) | [Generic Tool Calls](manual/src/02_llm_call/tools_3.md) | A `ToolFactory` trait and reusable `ToolDefinition` |
 | [`ex10_tools_params`](code/ex10_tools_params) | [Tool Calls with Parameters](manual/src/02_llm_call/tools_4.md) | A parameterised tool (`roll_dice` with a `sides` argument) |
 | [`ex11_bash_tool`](code/ex11_bash_tool) | [DANGER Will Robinson](manual/src/02_llm_call/tools_5.md) | The deliberately unsafe `bash` tool, confined to a container |
+| [`ex12_docker_safety`](code/ex12_docker_safety) | [Containers - Docker](manual/src/02_llm_call/tools_docker.md) | A non-root container refusing a file read, and the error reaching the model |
 
 ## Contents
 
@@ -89,8 +90,9 @@ The full table of contents is [`manual/src/SUMMARY.md`](manual/src/SUMMARY.md).
     - [Tool Calls with Parameters](manual/src/02_llm_call/tools_4.md)
     - [DANGER Will Robinson](manual/src/02_llm_call/tools_5.md)
     - [Safety Options for Tools](manual/src/02_llm_call/tools_6.md)
-      - Containers - Docker (placeholder)
+      - [Containers - Docker](manual/src/02_llm_call/tools_docker.md)
       - Sandboxes - Bubblewrap (placeholder)
+    - Prompt Injection (placeholder)
     - Governance (placeholder)
   - MCP Server Use (placeholder)
   - Make a Library (placeholder)

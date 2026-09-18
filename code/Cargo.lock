@@ -401,6 +401,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "ex12_docker_safety"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "colored",
+ "dotenvy",
+ "futures-util",
+ "reqwest",
+ "reqwest-sse",
+ "serde",
+ "serde_json",
+ "tokio",
+]
+
+[[package]]
 name = "find-msvc-tools"
 version = "0.1.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"

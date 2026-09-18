@@ -24,7 +24,7 @@ Please, absolutely, never rely on a regex or string search for safety. Writing a
 
 That's a losing battle from the start, so choose not to fight it.
 
-Instead, you have three axes to attack:
+Instead, you have four axes to attack:
 
 * **Governance**. Track the identity of the *calling user*, and *every tool call* checks that the user is permitted to make the call.
 * **Sandboxing**. This can happen at several levels:
@@ -33,5 +33,8 @@ Instead, you have three axes to attack:
   * *chroot*. It's an older form of sandbox, but it works on almost every \*NIX derived OS.
   * *Actual Sandboxes*. *Bubblewrap* is a popular sandbox; it uses the operating system's container system to keep a process from touching anything outside of the sandbox.
 * **Limit Tools**. If your process just needs to enumerate users and statuses, don't give them `bash` and a users/statuses system. Give them a tool that *specifically* provides the data they need.
+* **Embed Security Checks in Tools**. Especially for databases and APIs, pass the user identity to the tool and - if the db has security - use it. For example, if you have multiple tables of customer data and have group controls for who can access what; don't forget to use it!
 
 > Note that OpenAI reports several sandbox escapes. These agents can be smart!
+
+There's a curious thing here. This security list sounds a lot like something every experienced sysadmin/devops/developer already knows: if you have input from the outside, you can't trust it. At all.
