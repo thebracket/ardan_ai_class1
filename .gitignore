@@ -1,7 +1,7 @@
 # -----------------------------------------------------------------------------
 # Secrets — never commit these
 # -----------------------------------------------------------------------------
-# Any .env file in any directory (each example keeps its own with OPENROUTER_KEY).
+# Any .env file in any directory (code/.env is the shared one; an example may override it).
 .env
 .env.*
 # ...but keep templates, which contain no secrets.

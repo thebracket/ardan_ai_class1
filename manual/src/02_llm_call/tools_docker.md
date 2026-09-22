@@ -223,11 +223,11 @@ From `code/`:
 docker build -t ex12_docker_safety ex12_docker_safety
 ```
 
-Then run it with the hardening flags from the checklist. Put your key in `code/ex12_docker_safety/.env` first (the usual `OPENROUTER_KEY=...`):
+Then run it with the hardening flags from the checklist. Put your key in `code/.env` first (the usual `OPENROUTER_KEY=...`):
 
 ```bash
 docker run -it --rm \
-  --env-file ex12_docker_safety/.env \
+  --env-file .env \
   --read-only --tmpfs /tmp \
   --cap-drop ALL \
   --security-opt no-new-privileges \

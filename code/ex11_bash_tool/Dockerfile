@@ -39,7 +39,7 @@ COPY secret.txt /work/secret.txt
 
 # The API key is supplied at run time (--env-file); it is never baked into the
 # image. The container needs a TTY for the interactive chat loop:
-#   docker run -it --rm --env-file ex11_bash_tool/.env ex11_bash_tool
+#   docker run -it --rm --env-file .env ex11_bash_tool
 # Or drop into a shell in the same working directory instead:
 #   docker run --rm -it --entrypoint bash ex11_bash_tool
 CMD ["ex11_bash_tool"]

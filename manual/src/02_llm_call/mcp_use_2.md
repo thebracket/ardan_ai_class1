@@ -1,20 +1,10 @@
-# stdio and Streamable HTTP
+# Stdio and Streamable HTTP
 
-> **Draft — planning notes.**
+There are two types of MCP servers (many can operate as either):
 
-The spec defines two standard transports. The messages are the same; the plumbing differs.
+* `stdio` MCP servers are executed by the harness, and pass newline-delimited JSON-RPC over stdin/stdout.
+* `Streamable HTTP` servers run elsewhere. The harness POSTs each message, replies come back as a JSON body or a request-scoped SSE stream (just like how we're talking to LLM servers).
 
-## Covered here
+The primary difference is where the MCP server runs. `stdio` driven servers run on your hardware, more like local plugins to your harness. This can be beneficial for privacy, and development velocity - but also shifts the local maintenance burden to you. `Streamable HTTP` servers run anywhere. This may have privacy implications (the same as any other hosted API), and you may be at the mercy of your provider for maintenance and updates. As always with software engineering, it's a trade-off.
 
-* **stdio** — the client launches the server as a subprocess and speaks newline-delimited
-  JSON-RPC over its stdin/stdout. Logs go to stderr, and *nothing else* may go to stdout.
-  The server lives on your machine (or inside your container) and dies with the client.
-* **Streamable HTTP** — a single HTTP endpoint. The client POSTs each message; replies
-  come back as a JSON body or a request-scoped SSE stream. The server is a service: it can
-  live on localhost or on the open internet, and it outlives the client.
-* Where each one *resides*, and what that means for trust and lifecycle.
-* A comparison table: launch vs connect, `command`+`args` vs `url`, auth, lifetime.
-* History box: the original 2024-11-05 HTTP+SSE transport (two endpoints) is deprecated,
-  replaced by Streamable HTTP in 2025-03-26. Don't teach the old one as current.
-* Note the 2026-07-28 revision: protocol-level sessions and the `initialize` handshake are
-  gone from Streamable HTTP, and requests carry version/capabilities in `_meta`.
+> Note that the original specification from November 2024 specifying HTTP+SSE transport (two endpoints) is now deprecated. It's also worth noting that in July of 2026, protocol-level sessions and the `initialize` handshake were removed; version/capabilities were moved to a `_meta` stream. The AI world moves fast. MCP servers are more complicated than local tools, and you can expect the standard to keep changing.

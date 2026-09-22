@@ -46,7 +46,7 @@ USER appuser
 # namespaces - they are the minimum that worked, and are much narrower than
 # --privileged:
 #   docker run -it --rm \
-#     --env-file ex13_bwrap_sandbox/.env \
+#     --env-file .env \
 #     --security-opt systempaths=unconfined \
 #     --security-opt seccomp=unconfined \
 #     --security-opt apparmor=unconfined \

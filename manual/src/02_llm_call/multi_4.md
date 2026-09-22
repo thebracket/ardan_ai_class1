@@ -10,4 +10,4 @@ There's a *lot* of different approaches to context management. We won't implemen
 
 * OpenAI expose a "compaction model", whose sole purpose is to read existing conversations and allow them to be replaced with a summary.
 * Some systems "middle out" - they keep the beginning and recent context, dropping items from the middle.
-* You could just have a hard limit, if you are building a bounded agent.
+* You could just have a hard limit, if you are building a bounded agent. The `max_tokens` parameter is the smallest version of this: it caps a *single* reply, not the whole conversation.

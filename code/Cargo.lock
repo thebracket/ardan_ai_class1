@@ -479,6 +479,40 @@ dependencies = [
 ]
 
 [[package]]
+name = "ex17_mcp_client"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "serde_json",
+ "tokio",
+]
+
+[[package]]
+name = "ex18_mcp_tools"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "colored",
+ "dotenvy",
+ "futures-util",
+ "reqwest",
+ "reqwest-sse",
+ "serde",
+ "serde_json",
+ "tokio",
+]
+
+[[package]]
+name = "ex19_mcp_remote"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "reqwest",
+ "serde_json",
+ "tokio",
+]
+
+[[package]]
 name = "find-msvc-tools"
 version = "0.1.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"

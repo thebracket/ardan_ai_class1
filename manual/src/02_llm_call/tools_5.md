@@ -107,10 +107,10 @@ cd code
 docker build -t ex11_bash_tool ex11_bash_tool
 ```
 
-Put your key in `code/ex11_bash_tool/.env` (the usual `OPENROUTER_KEY=...`), then run it with a TTY. The chat loop reads from stdin, so `-i` keeps stdin open and `-t` gives it a terminal - without them you can't type anything:
+Put your key in `code/.env` (the usual `OPENROUTER_KEY=...`), then run it with a TTY. The chat loop reads from stdin, so `-i` keeps stdin open and `-t` gives it a terminal - without them you can't type anything:
 
 ```bash
-docker run -it --rm --env-file ex11_bash_tool/.env ex11_bash_tool
+docker run -it --rm --env-file .env ex11_bash_tool
 ```
 
 The first `docker build` compiles the crate inside the image, so it takes a minute. After that the layer is cached and rebuilds are quick.
@@ -128,7 +128,7 @@ You land in `/work`, with `secret.txt` sitting right next to you. (That's the wh
 If you want to drive the chatbot from inside that shell, pass the key in and run the binary by hand:
 
 ```bash
-docker run --rm -it --env-file ex11_bash_tool/.env --entrypoint bash ex11_bash_tool
+docker run --rm -it --env-file .env --entrypoint bash ex11_bash_tool
 # at the container's shell prompt:
 ex11_bash_tool
 ```

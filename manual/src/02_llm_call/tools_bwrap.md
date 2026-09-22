@@ -155,7 +155,7 @@ cd code
 docker build -t ex13_bwrap_sandbox ex13_bwrap_sandbox
 
 docker run -it --rm \
-  --env-file ex13_bwrap_sandbox/.env \
+  --env-file .env \
   --security-opt systempaths=unconfined \
   --security-opt seccomp=unconfined \
   --security-opt apparmor=unconfined \
@@ -168,7 +168,7 @@ What each one is for:
 * `seccomp=unconfined` - the default seccomp profile blocks the namespace syscalls `bwrap` uses.
 * `apparmor=unconfined` - the host's AppArmor policy can also block user-namespace creation.
 
-Put your key in `code/ex13_bwrap_sandbox/.env` first, exactly as in the other examples.
+Put your key in `code/.env` first, exactly as in the other examples.
 
 > This nesting is a genuinely useful thing to demonstrate. It shows that a container and a sandbox are *layers*, not substitutes: the container gives a Mac user a Linux kernel, and `bwrap` then does the fine-grained filesystem work inside it. It also shows why "just use `--privileged`" is the lazy answer - the narrow flags are more instructive, and safer.
 

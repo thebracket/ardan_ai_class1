@@ -12,10 +12,10 @@
 ```text
 code/
   Cargo.toml            # workspace; every exNN crate is a member
-  ex01_hello/ ... ex16_structured/
+  .env                  # local only, gitignored: shared OPENROUTER_KEY
+  ex01_hello/ ... ex19_mcp_remote/
     Cargo.toml
     src/main.rs         # some also have src/chatbot.rs
-    .env                # local only, gitignored (contains OPENROUTER_KEY)
 manual/
   book.toml
   src/                  # the book source
@@ -68,6 +68,9 @@ mdbook build manual
 | [`ex14_injection`](code/ex14_injection) | [Prompt Injection Example](manual/src/02_llm_call/prompt_injection_2.md) | A harmless weather tool that smuggles a pirate instruction into the conversation |
 | [`ex15_provenance`](code/ex15_provenance) | [Provenance](manual/src/02_llm_call/provenance.md) | Explicit and enforced provenance: refusing privileged tools after untrusted data |
 | [`ex16_structured`](code/ex16_structured) | [Structured Output from Tools](manual/src/02_llm_call/tools_structured.md) | Returning structured data from a tool so the model reads fields, not prose |
+| [`ex17_mcp_client`](code/ex17_mcp_client) | [How a Server Describes Itself](manual/src/02_llm_call/mcp_use_3.md) | Spawning a stdio MCP server, negotiating the protocol, and listing its tools |
+| [`ex18_mcp_tools`](code/ex18_mcp_tools) | [Wiring MCP Into Our Tool System](manual/src/02_llm_call/mcp_use_8.md) | Translating MCP tools into `ToolDefinition`s and routing the model's calls to a server |
+| [`ex19_mcp_remote`](code/ex19_mcp_remote) | [Remote Servers over Streamable HTTP](manual/src/02_llm_call/mcp_use_10.md) | A Streamable HTTP client: probe a remote server, list its tools, and call one |
 
 ## Contents
 
@@ -77,7 +80,9 @@ The full table of contents is [`manual/src/SUMMARY.md`](manual/src/SUMMARY.md).
   - Who Am I? (placeholder)
   - Format (placeholder)
   - Signposting (placeholder)
+- [What You Need](manual/src/01_start/what_you_need.md)
 - [Getting Started](manual/src/01_start/intro.md)
+- [Your Results Will Differ](manual/src/01_start/your_results_will_differ.md)
 - [Talking to AI Models](manual/src/02_llm_call/intro.md)
   - [A Simple Request](manual/src/02_llm_call/simple_request_1.md)
     - [Making the Call](manual/src/02_llm_call/simple_request_2.md)
@@ -91,6 +96,7 @@ The full table of contents is [`manual/src/SUMMARY.md`](manual/src/SUMMARY.md).
     - [A Quick Refactor](manual/src/02_llm_call/multi_2.md)
     - [Adding State](manual/src/02_llm_call/multi_3.md)
     - [Warning: Unbounded Growth](manual/src/02_llm_call/multi_4.md)
+  - Multimodal Input (placeholder)
   - [Tool Use](manual/src/02_llm_call/tools_1.md)
     - [Hard-Coded Tool](manual/src/02_llm_call/tools_2.md)
     - [Generic Tool Calls](manual/src/02_llm_call/tools_3.md)
@@ -107,7 +113,7 @@ The full table of contents is [`manual/src/SUMMARY.md`](manual/src/SUMMARY.md).
     - [Fitting MCP Into the Model's Context](manual/src/02_llm_call/mcp_use_4.md)
     - [A Server to Play With](manual/src/02_llm_call/mcp_use_5.md)
       - [Talking to It by Hand](manual/src/02_llm_call/mcp_use_6.md)
-    - [Spawning a stdio Server](manual/src/02_llm_call/mcp_use_7.md)
+    - [Keeping a Server Alive](manual/src/02_llm_call/mcp_use_7.md)
     - [Wiring MCP Into Our Tool System](manual/src/02_llm_call/mcp_use_8.md)
       - [The Round Trip](manual/src/02_llm_call/mcp_use_9.md)
     - [Remote Servers over Streamable HTTP](manual/src/02_llm_call/mcp_use_10.md)

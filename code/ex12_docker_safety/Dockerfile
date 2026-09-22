@@ -49,7 +49,7 @@ USER appuser
 # image. Run with the hardening flags from the chapter, and never mount the
 # Docker socket:
 #   docker run -it --rm \
-#     --env-file ex12_docker_safety/.env \
+#     --env-file .env \
 #     --read-only --tmpfs /tmp \
 #     --cap-drop ALL \
 #     --security-opt no-new-privileges \
