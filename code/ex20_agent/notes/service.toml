@@ -1,0 +1,9 @@
+[service]
+name = "deploy-service"
+port = 8443
+region = "eu-west-1"
+owner_team = "platform"
+
+[health]
+path = "/healthz"
+interval_seconds = 30

@@ -71,6 +71,7 @@ Manual chapter → code correspondence:
 | `02_llm_call/prompt_injection.md`       | —                        | Direct vs indirect prompt injection    |
 | `02_llm_call/prompt_injection_2.md`     | `ex14_injection`         | Tool output smuggles an instruction    |
 | `02_llm_call/provenance*.md`            | `ex15_provenance`        | Explicit vs enforced provenance        |
+| `05_agents/simple_agent.md`             | `ex20_agent`             | A goal-driven agent loop over notes    |
 
 `multi_1.md`, `tools_1.md`, `tools_6.md`, and `prompt_injection.md` are conceptual
 and reference no example. `provenance*.md` is the `provenance.md` parent plus its
@@ -85,7 +86,7 @@ code/
   Cargo.toml            # workspace; every exNN crate is a member
   src/main.rs           # stub that tells you to run a workshop member
   .env                  # local only, gitignored; shared OPENROUTER_KEY for the examples
-  ex01_hello/ ... ex19_mcp_remote/
+  ex01_hello/ ... ex20_agent/
     Cargo.toml
     src/main.rs         # some also have src/chatbot.rs
 manual/

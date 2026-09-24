@@ -77,6 +77,7 @@ Rows follow the order of `[workspace] members` in `code/Cargo.toml`.
 | `ex17_mcp_client` | `02_llm_call/mcp_use_3.md` | Spawning a stdio MCP server, negotiating the protocol, and listing its tools |
 | `ex18_mcp_tools` | `02_llm_call/mcp_use_8.md` | Translating MCP tools into `ToolDefinition`s and routing the model's calls to a server |
 | `ex19_mcp_remote` | `02_llm_call/mcp_use_10.md` | A Streamable HTTP client: probe a remote server, list its tools, and call one |
+| `ex20_agent` | `05_agents/simple_agent.md` | A goal-driven agent loop over a small notes corpus, with an iteration cap |
 
 When this table changes, update it here too.
 
