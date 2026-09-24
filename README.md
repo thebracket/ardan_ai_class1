@@ -13,7 +13,7 @@
 code/
   Cargo.toml            # workspace; every exNN crate is a member
   .env                  # local only, gitignored: shared OPENROUTER_KEY
-  ex01_hello/ ... ex21_jev/
+  ex01_hello/ ... ex22_mcp_server/
     Cargo.toml
     src/main.rs         # some also have src/chatbot.rs
 manual/
@@ -73,6 +73,7 @@ mdbook build manual
 | [`ex19_mcp_remote`](code/ex19_mcp_remote) | [Remote Servers over Streamable HTTP](manual/src/02_llm_call/mcp_use_10.md) | A Streamable HTTP client: probe a remote server, list its tools, and call one |
 | [`ex20_agent`](code/ex20_agent) | [A Very Simple Agent](manual/src/05_agents/simple_agent.md) | A goal-driven agent loop over a small notes corpus, with an iteration cap |
 | [`ex21_jev`](code/ex21_jev) | [A Jev Classifier in Rust](manual/src/05_agents/jev_classifier.md) | Calling Jev for a typed decision, then routing on it in code |
+| [`ex22_mcp_server`](code/ex22_mcp_server) | [A Minimal Server](manual/src/03_mcp_servers/a_minimal_server.md) | A minimal MCP server with `rmcp`, and a self-driving `--demo` |
 
 ## Contents
 
@@ -132,7 +133,15 @@ The full table of contents is [`manual/src/SUMMARY.md`](manual/src/SUMMARY.md).
       - [What Provenance Buys You](manual/src/02_llm_call/provenance_takeaways.md)
   - Make a Library (placeholder)
   - Wrap Up (placeholder)
-- Writing MCP Servers (placeholder)
+- [Writing MCP Servers](manual/src/03_mcp_servers/intro.md)
+  - [The Official Rust SDK](manual/src/03_mcp_servers/the_rust_sdk.md)
+  - [A Minimal Server](manual/src/03_mcp_servers/a_minimal_server.md)
+  - [Tools, Resources, and Prompts](manual/src/03_mcp_servers/tools_resources_prompts.md)
+  - [Transports: stdio and Streamable HTTP](manual/src/03_mcp_servers/transports.md)
+  - [Errors and Logging](manual/src/03_mcp_servers/errors_and_logging.md)
+  - [Testing Your Server](manual/src/03_mcp_servers/testing_your_server.md)
+  - [Wiring It Into a Harness](manual/src/03_mcp_servers/wiring_it_in.md)
+  - [A Server You Shouldn't Trust](manual/src/03_mcp_servers/server_security.md)
 - Retrieval Augmented Generation (RAG) (placeholder)
 - Agents (placeholder)
   - [The Agentic Loop](manual/src/05_agents/the_agentic_loop.md)

@@ -73,6 +73,7 @@ Manual chapter → code correspondence:
 | `02_llm_call/provenance*.md`            | `ex15_provenance`        | Explicit vs enforced provenance        |
 | `05_agents/simple_agent.md`             | `ex20_agent`             | A goal-driven agent loop over notes    |
 | `05_agents/jev_classifier.md`           | `ex21_jev`               | Typed classification with Jev, routed in code |
+| `03_mcp_servers/a_minimal_server.md`    | `ex22_mcp_server`        | A minimal MCP server with the official SDK |
 
 `multi_1.md`, `tools_1.md`, `tools_6.md`, and `prompt_injection.md` are conceptual
 and reference no example. `provenance*.md` is the `provenance.md` parent plus its
@@ -87,7 +88,7 @@ code/
   Cargo.toml            # workspace; every exNN crate is a member
   src/main.rs           # stub that tells you to run a workshop member
   .env                  # local only, gitignored; shared OPENROUTER_KEY for the examples
-  ex01_hello/ ... ex21_jev/
+  ex01_hello/ ... ex22_mcp_server/
     Cargo.toml
     src/main.rs         # some also have src/chatbot.rs
 manual/
