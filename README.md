@@ -13,7 +13,7 @@
 code/
   Cargo.toml            # workspace; every exNN crate is a member
   .env                  # local only, gitignored: shared OPENROUTER_KEY
-  ex01_hello/ ... ex20_agent/
+  ex01_hello/ ... ex21_jev/
     Cargo.toml
     src/main.rs         # some also have src/chatbot.rs
 manual/
@@ -72,6 +72,7 @@ mdbook build manual
 | [`ex18_mcp_tools`](code/ex18_mcp_tools) | [Wiring MCP Into Our Tool System](manual/src/02_llm_call/mcp_use_8.md) | Translating MCP tools into `ToolDefinition`s and routing the model's calls to a server |
 | [`ex19_mcp_remote`](code/ex19_mcp_remote) | [Remote Servers over Streamable HTTP](manual/src/02_llm_call/mcp_use_10.md) | A Streamable HTTP client: probe a remote server, list its tools, and call one |
 | [`ex20_agent`](code/ex20_agent) | [A Very Simple Agent](manual/src/05_agents/simple_agent.md) | A goal-driven agent loop over a small notes corpus, with an iteration cap |
+| [`ex21_jev`](code/ex21_jev) | [A Jev Classifier in Rust](manual/src/05_agents/jev_classifier.md) | Calling Jev for a typed decision, then routing on it in code |
 
 ## Contents
 
@@ -140,6 +141,14 @@ The full table of contents is [`manual/src/SUMMARY.md`](manual/src/SUMMARY.md).
     - [That Could Have Been An If Statement](manual/src/05_agents/if_statement.md)
   - [Different Model Types](manual/src/05_agents/model_types.md)
   - [Let's Build An Agent](manual/src/05_agents/build_an_agent.md)
+  - [What Could Go Wrong?](manual/src/05_agents/what_could_go_wrong.md)
+    - [It's Just Cron and a Heartbeat](manual/src/05_agents/cron_and_heartbeat.md)
+    - [Structured Output Is Not a Contract](manual/src/05_agents/structured_output.md)
+      - [Classify, Don't Generate](manual/src/05_agents/classify_dont_generate.md)
+        - [A Jev Classifier in Rust](manual/src/05_agents/jev_classifier.md)
+  - [Workflows](manual/src/05_agents/workflows.md)
+    - [Defining a Workflow](manual/src/05_agents/defining_a_workflow.md)
+    - [Choosing a Workflow](manual/src/05_agents/choosing_a_workflow.md)
 - Production Concerns (placeholder)
   - Concurrency (placeholder)
   - Retries (placeholder)

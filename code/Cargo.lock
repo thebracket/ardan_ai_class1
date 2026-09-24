@@ -528,6 +528,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "ex21_jev"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "dotenvy",
+ "reqwest",
+ "serde",
+ "serde_json",
+ "tokio",
+]
+
+[[package]]
 name = "find-msvc-tools"
 version = "0.1.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
