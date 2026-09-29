@@ -83,6 +83,7 @@ mdbook build manual
 | [`ex28_retrieval_eval`](code/ex28_retrieval_eval) | [Evaluating RAG Results](manual/src/04_rag/evaluating_rag.md) | A scoreboard: keyword vs full-text vs semantic on golden questions |
 | [`ex29_hybrid_search`](code/ex29_hybrid_search) | [Keywords and Meaning Together](manual/src/04_rag/hybrid_search.md) | BM25 + embeddings fused with reciprocal rank fusion |
 | [`ex30_rerank`](code/ex30_rerank) | [A Second Opinion: Rerankers](manual/src/04_rag/reranking.md) | A cross-encoder reranking the fused shortlist |
+| [`ex31_keyword_extraction`](code/ex31_keyword_extraction) | [Cheap Tags: Keywords from Small Models](manual/src/04_rag/keyword_extraction.md) | A small model turning text into keywords with one simple prompt |
 
 ## Contents
 

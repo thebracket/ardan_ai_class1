@@ -88,6 +88,7 @@ Rows follow the order of `[workspace] members` in `code/Cargo.toml`.
 | `ex28_retrieval_eval` | `04_rag/evaluating_rag.md` | hit@k / MRR scoreboard comparing keyword, full-text and semantic retrieval |
 | `ex29_hybrid_search` | `04_rag/hybrid_search.md` | Reciprocal rank fusion combining BM25 and embedding rankings |
 | `ex30_rerank` | `04_rag/reranking.md` | A cross-encoder reranking the fused candidate shortlist |
+| `ex31_keyword_extraction` | `04_rag/keyword_extraction.md` | A small model extracting keywords with a single formatted prompt |
 
 When this table changes, update it here too.
 
