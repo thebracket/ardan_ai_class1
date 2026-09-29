@@ -71,7 +71,7 @@
   - [Ingesting a Manual](./04_rag/ingesting_a_manual.md)
   - [Chunking](./04_rag/chunking.md)
   - [Let the Bot Read the Docs](./04_rag/rag_as_a_tool.md)
-  - [Evaluating RAG Results]()
+  - [Evaluating RAG Results](./04_rag/evaluating_rag.md)
   - [Keywords and Meaning Together]()
   - [A Second Opinion: Rerankers]()
   - [Cheap Tags: Keywords from Small Models](./04_rag/keyword_extraction.md)

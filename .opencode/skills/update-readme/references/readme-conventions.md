@@ -85,6 +85,7 @@ Rows follow the order of `[workspace] members` in `code/Cargo.toml`.
 | `ex25_text_search` | `04_rag/keyword_search.md`, `04_rag/full_text_search.md` | Corpus loading, naive keyword search, and SQLite FTS5 |
 | `ex26_vector_search` | `04_rag/ingesting_a_manual.md`, `04_rag/chunking.md` | Heading-aware markdown chunking, embeddings stored as SQLite BLOBs, cosine search |
 | `ex27_rag_chat` | `04_rag/rag_as_a_tool.md` | A `read_docs` tool wiring the vector index into the chat loop |
+| `ex28_retrieval_eval` | `04_rag/evaluating_rag.md` | hit@k / MRR scoreboard comparing keyword, full-text and semantic retrieval |
 
 When this table changes, update it here too.
 

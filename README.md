@@ -80,6 +80,7 @@ mdbook build manual
 | [`ex25_text_search`](code/ex25_text_search) | [Keyword Search](manual/src/04_rag/keyword_search.md) | Naive keyword search and SQLite FTS5 over the class-notes corpus |
 | [`ex26_vector_search`](code/ex26_vector_search) | [Ingesting a Manual](manual/src/04_rag/ingesting_a_manual.md) | Heading-aware chunking, `fastembed` passages, and vectors stored in SQLite |
 | [`ex27_rag_chat`](code/ex27_rag_chat) | [Let the Bot Read the Docs](manual/src/04_rag/rag_as_a_tool.md) | A `read_docs` tool: retrieval behind the chat loop, answered with citations |
+| [`ex28_retrieval_eval`](code/ex28_retrieval_eval) | [Evaluating RAG Results](manual/src/04_rag/evaluating_rag.md) | A scoreboard: keyword vs full-text vs semantic on golden questions |
 
 ## Contents
 
@@ -156,7 +157,7 @@ The full table of contents is [`manual/src/SUMMARY.md`](manual/src/SUMMARY.md).
   - [Ingesting a Manual](manual/src/04_rag/ingesting_a_manual.md)
   - [Chunking](manual/src/04_rag/chunking.md)
   - [Let the Bot Read the Docs](manual/src/04_rag/rag_as_a_tool.md)
-  - Evaluating RAG Results (placeholder)
+  - [Evaluating RAG Results](manual/src/04_rag/evaluating_rag.md)
   - Keywords and Meaning Together (placeholder)
   - A Second Opinion: Rerankers (placeholder)
   - [Cheap Tags: Keywords from Small Models](manual/src/04_rag/keyword_extraction.md)
