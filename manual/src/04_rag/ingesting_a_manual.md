@@ -1,7 +1,7 @@
 # Ingesting a Manual
 
 > **Draft — planning notes.**
-> This will be in the repo as `ex26_vector_search` (provisional number).
+> This is in the repo as `ex26_vector_search`.
 
 We have embeddings and a distance search. Now let's point them at something real: my
 [Ultimate Rust Foundations](https://github.com/thebracket/ArdanUltimateRust-5Days) class notes.

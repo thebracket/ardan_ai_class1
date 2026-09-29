@@ -77,6 +77,7 @@ mdbook build manual
 | [`ex23_multimodal`](code/ex23_multimodal) | [Multimodal Input](manual/src/02_llm_call/multimodal.md) | Sending a picture alongside a text prompt, and reading the description back |
 | [`ex24_embeddings`](code/ex24_embeddings) | [Searching by Meaning](manual/src/04_rag/searching_by_meaning.md) | Local `fastembed` embeddings, cosine similarity, and a PCA plot of the vectors |
 | [`ex25_text_search`](code/ex25_text_search) | [Keyword Search](manual/src/04_rag/keyword_search.md) | Naive keyword search and SQLite FTS5 over the class-notes corpus |
+| [`ex26_vector_search`](code/ex26_vector_search) | [Ingesting a Manual](manual/src/04_rag/ingesting_a_manual.md) | Heading-aware chunking, `fastembed` passages, and vectors stored in SQLite |
 
 ## Contents
 
