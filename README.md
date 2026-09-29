@@ -75,6 +75,7 @@ mdbook build manual
 | [`ex21_jev`](code/ex21_jev) | [A Jev Classifier in Rust](manual/src/05_agents/jev_classifier.md) | Calling Jev for a typed decision, then routing on it in code |
 | [`ex22_mcp_server`](code/ex22_mcp_server) | [A Minimal Server](manual/src/03_mcp_servers/a_minimal_server.md) | A minimal MCP server with `rmcp`, and a self-driving `--demo` |
 | [`ex23_multimodal`](code/ex23_multimodal) | [Multimodal Input](manual/src/02_llm_call/multimodal.md) | Sending a picture alongside a text prompt, and reading the description back |
+| [`ex24_embeddings`](code/ex24_embeddings) | [Searching by Meaning](manual/src/04_rag/searching_by_meaning.md) | Local `fastembed` embeddings, cosine similarity, and a PCA plot of the vectors |
 
 ## Contents
 
@@ -143,7 +144,23 @@ The full table of contents is [`manual/src/SUMMARY.md`](manual/src/SUMMARY.md).
   - [Testing Your Server](manual/src/03_mcp_servers/testing_your_server.md)
   - [Wiring It Into a Harness](manual/src/03_mcp_servers/wiring_it_in.md)
   - [A Server You Shouldn't Trust](manual/src/03_mcp_servers/server_security.md)
-- Retrieval Augmented Generation (RAG) (placeholder)
+- [Retrieval Augmented Generation (RAG)](manual/src/04_rag/intro.md)
+  - Keyword Search (placeholder)
+  - Full Text Search (placeholder)
+  - [Searching by Meaning](manual/src/04_rag/searching_by_meaning.md)
+  - Search Is a Distance (placeholder)
+  - Ingesting a Manual (placeholder)
+  - Chunking (placeholder)
+  - Let the Bot Read the Docs (placeholder)
+  - Evaluating RAG Results (placeholder)
+  - Keywords and Meaning Together (placeholder)
+  - A Second Opinion: Rerankers (placeholder)
+  - Cheap Tags: Keywords from Small Models (placeholder)
+  - When Your Documents Fight Back (placeholder)
+  - An Index You Don't Have to Write: sqlite-vec (placeholder)
+  - When SQLite Isn't Enough: LanceDB (placeholder)
+  - It's a Data Problem (placeholder)
+  - Who's Allowed to Read This? (placeholder)
 - Agents (placeholder)
   - [The Agentic Loop](manual/src/05_agents/the_agentic_loop.md)
   - [A Very Simple Agent](manual/src/05_agents/simple_agent.md)

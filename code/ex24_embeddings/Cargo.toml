@@ -1,0 +1,10 @@
+[package]
+name = "ex24_embeddings"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.104"
+fastembed = { version = "7.1.0", default-features = false, features = ["hf-hub-native-tls", "ort-download-binaries-native-tls"] }
+nalgebra = "0.35.0"
+plotters = "0.3.7"

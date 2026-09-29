@@ -81,6 +81,7 @@ Rows follow the order of `[workspace] members` in `code/Cargo.toml`.
 | `ex21_jev` | `05_agents/jev_classifier.md` | Calling Jev for a typed decision, then routing on it in code |
 | `ex22_mcp_server` | `03_mcp_servers/a_minimal_server.md` | A minimal MCP server built with the official Rust SDK (`rmcp`) |
 | `ex23_multimodal` | `02_llm_call/multimodal.md` | Sending an image with a text prompt, and reading the description back |
+| `ex24_embeddings` | `04_rag/searching_by_meaning.md` | Local `fastembed` embeddings, cosine similarity, and a PCA plot of the vectors |
 
 When this table changes, update it here too.
 
