@@ -86,6 +86,7 @@ Rows follow the order of `[workspace] members` in `code/Cargo.toml`.
 | `ex26_vector_search` | `04_rag/ingesting_a_manual.md`, `04_rag/chunking.md` | Heading-aware markdown chunking, embeddings stored as SQLite BLOBs, cosine search |
 | `ex27_rag_chat` | `04_rag/rag_as_a_tool.md` | A `read_docs` tool wiring the vector index into the chat loop |
 | `ex28_retrieval_eval` | `04_rag/evaluating_rag.md` | hit@k / MRR scoreboard comparing keyword, full-text and semantic retrieval |
+| `ex29_hybrid_search` | `04_rag/hybrid_search.md` | Reciprocal rank fusion combining BM25 and embedding rankings |
 
 When this table changes, update it here too.
 

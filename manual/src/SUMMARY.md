@@ -72,7 +72,7 @@
   - [Chunking](./04_rag/chunking.md)
   - [Let the Bot Read the Docs](./04_rag/rag_as_a_tool.md)
   - [Evaluating RAG Results](./04_rag/evaluating_rag.md)
-  - [Keywords and Meaning Together]()
+  - [Keywords and Meaning Together](./04_rag/hybrid_search.md)
   - [A Second Opinion: Rerankers]()
   - [Cheap Tags: Keywords from Small Models](./04_rag/keyword_extraction.md)
   - [When Your Documents Fight Back]()
