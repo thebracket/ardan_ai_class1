@@ -1,0 +1,13 @@
+[package]
+name = "ex33_lancedb"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.104"
+arrow-array = "58"
+arrow-schema = "58"
+fastembed = { version = "7.1.0", default-features = false, features = ["hf-hub-native-tls", "ort-download-binaries-native-tls"] }
+futures = "0.3.34"
+lancedb = { version = "0.39.0", features = ["remote"] }
+tokio = { version = "1.53.1", features = ["full"] }

@@ -89,6 +89,8 @@ Rows follow the order of `[workspace] members` in `code/Cargo.toml`.
 | `ex29_hybrid_search` | `04_rag/hybrid_search.md` | Reciprocal rank fusion combining BM25 and embedding rankings |
 | `ex30_rerank` | `04_rag/reranking.md` | A cross-encoder reranking the fused candidate shortlist |
 | `ex31_keyword_extraction` | `04_rag/keyword_extraction.md` | A small model extracting keywords with a single formatted prompt |
+| `ex32_sqlite_vec` | `04_rag/sqlite_vec.md` | A `vec0` index and KNN query inside SQLite |
+| `ex33_lancedb` | `04_rag/lancedb.md` | An embedded LanceDB project with an Arrow vector column |
 
 When this table changes, update it here too.
 

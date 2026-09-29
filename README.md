@@ -84,6 +84,8 @@ mdbook build manual
 | [`ex29_hybrid_search`](code/ex29_hybrid_search) | [Keywords and Meaning Together](manual/src/04_rag/hybrid_search.md) | BM25 + embeddings fused with reciprocal rank fusion |
 | [`ex30_rerank`](code/ex30_rerank) | [A Second Opinion: Rerankers](manual/src/04_rag/reranking.md) | A cross-encoder reranking the fused shortlist |
 | [`ex31_keyword_extraction`](code/ex31_keyword_extraction) | [Cheap Tags: Keywords from Small Models](manual/src/04_rag/keyword_extraction.md) | A small model turning text into keywords with one simple prompt |
+| [`ex32_sqlite_vec`](code/ex32_sqlite_vec) | [An Index You Don't Have to Write: sqlite-vec](manual/src/04_rag/sqlite_vec.md) | Storing and KNN-querying vectors with the sqlite-vec extension |
+| [`ex33_lancedb`](code/ex33_lancedb) | [When SQLite Isn't Enough: LanceDB](manual/src/04_rag/lancedb.md) | An embedded LanceDB project with an Arrow vector column and vector search |
 
 ## Contents
 
@@ -164,11 +166,11 @@ The full table of contents is [`manual/src/SUMMARY.md`](manual/src/SUMMARY.md).
   - [Keywords and Meaning Together](manual/src/04_rag/hybrid_search.md)
   - [A Second Opinion: Rerankers](manual/src/04_rag/reranking.md)
   - [Cheap Tags: Keywords from Small Models](manual/src/04_rag/keyword_extraction.md)
-  - When Your Documents Fight Back (placeholder)
-  - An Index You Don't Have to Write: sqlite-vec (placeholder)
-  - When SQLite Isn't Enough: LanceDB (placeholder)
-  - It's a Data Problem (placeholder)
-  - Who's Allowed to Read This? (placeholder)
+  - [When Your Documents Fight Back](manual/src/04_rag/prompt_injection.md)
+  - [An Index You Don't Have to Write: sqlite-vec](manual/src/04_rag/sqlite_vec.md)
+  - [When SQLite Isn't Enough: LanceDB](manual/src/04_rag/lancedb.md)
+  - [It's a Data Problem](manual/src/04_rag/stewardship.md)
+  - [Who's Allowed to Read This?](manual/src/04_rag/governance.md)
 - Agents (placeholder)
   - [The Agentic Loop](manual/src/05_agents/the_agentic_loop.md)
   - [A Very Simple Agent](manual/src/05_agents/simple_agent.md)
