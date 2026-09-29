@@ -14,28 +14,64 @@ const CORPUS_ENV: &str = "RUST_NOTES_DIR";
 // The expected value is a path substring, so the eval still works when you
 // point RUST_NOTES_DIR at the full notes.
 struct Question {
+    // The question the way a person would ask it.
     text: &'static str,
+    // The same need, phrased the way someone who knows the vocabulary would
+    // search for it. Keyword search rewards this; embeddings don't care.
+    keywords: &'static str,
+    // The file the answer should come from.
     expected: &'static str,
 }
 
 const QUESTIONS: [Question; 10] = [
-    Question { text: "How do I share data between threads?", expected: "Mutexes.md" },
-    Question { text: "How do I send data from one thread to another?", expected: "Channels.md" },
-    Question { text: "What are the performance costs of locking a mutex?", expected: "Mutexes.md" },
-    Question { text: "How do I use Rc to avoid lifetime problems?", expected: "Lifetimes.md" },
     Question {
-        text: "Why does the borrow checker complain about returning references?",
-        expected: "Lifetimes.md",
-    },
-    Question { text: "How do I find and fix a memory leak?", expected: "MemoryLeaks.md" },
-    Question { text: "What is async/await?", expected: "AsyncAwaitOverview.md" },
-    Question { text: "What is the difference between a sender and a receiver?", expected: "Channels.md" },
-    Question {
-        text: "How do I stop threads from corrupting shared data?",
+        text: "How do I share data between threads?",
+        keywords: "mutex",
         expected: "Mutexes.md",
     },
     Question {
-        text: "What should I learn first when starting with Rust?",
+        text: "How do I send data from one thread to another?",
+        keywords: "channel",
+        expected: "Channels.md",
+    },
+    Question {
+        text: "What are the performance costs of locking a mutex?",
+        keywords: "mutex performance",
+        expected: "Mutexes.md",
+    },
+    Question {
+        text: "How do I use Rc to avoid lifetime problems?",
+        keywords: "Rc lifetimes",
+        expected: "Lifetimes.md",
+    },
+    Question {
+        text: "Why does the borrow checker complain about returning references?",
+        keywords: "return reference lifetime",
+        expected: "Lifetimes.md",
+    },
+    Question {
+        text: "How do I find and fix a memory leak?",
+        keywords: "memory leak",
+        expected: "MemoryLeaks.md",
+    },
+    Question {
+        text: "What is async/await?",
+        keywords: "async await",
+        expected: "AsyncAwaitOverview.md",
+    },
+    Question {
+        text: "What is the difference between a sender and a receiver?",
+        keywords: "sender receiver",
+        expected: "Channels.md",
+    },
+    Question {
+        text: "How do I stop threads from corrupting shared data?",
+        keywords: "mutex",
+        expected: "Mutexes.md",
+    },
+    Question {
+        text: "How do I create a mutable variable in Rust?",
+        keywords: "mutability shadowing",
         expected: "RustFundamentals.md",
     },
 ];
@@ -377,16 +413,20 @@ fn main() -> Result<()> {
         Metrics::default(),
         Metrics::default(),
         Metrics::default(),
+        Metrics::default(),
     ];
 
     println!(
-        "{:<50} {:>8} {:>10} {:>9}",
-        "Question", "keyword", "full-text", "semantic"
+        "{:<44} {:>7} {:>8} {:>8} {:>8}",
+        "Question", "count", "bm25 q", "bm25 kw", "semantic"
     );
     for (index, question) in QUESTIONS.iter().enumerate() {
+        // The same question, searched two ways: as typed, and as a person who
+        // knows the vocabulary would type it.
         let rankings = [
             keyword_ranking(&documents, question.text),
             full_text_ranking(&connection, question.text)?,
+            full_text_ranking(&connection, question.keywords)?,
             semantic_ranking(&question_embeddings[index], &chunks, &chunk_embeddings),
         ];
 
@@ -398,20 +438,22 @@ fn main() -> Result<()> {
         }
 
         println!(
-            "{:<50} {:>8} {:>10} {:>9}",
-            truncate(question.text, 50),
+            "{:<44} {:>7} {:>8} {:>8} {:>8}",
+            truncate(question.text, 44),
             cells[0],
             cells[1],
-            cells[2]
+            cells[2],
+            cells[3]
         );
     }
 
     let total = QUESTIONS.len() as f64;
     println!();
-    println!("{:<12} {:>6} {:>7} {:>7} {:>7}", "Method", "hit@1", "hit@3", "hit@5", "MRR");
-    for (name, metrics) in ["keyword", "full-text", "semantic"].iter().zip(&metrics) {
+    println!("{:<16} {:>6} {:>7} {:>7} {:>7}", "Method", "hit@1", "hit@3", "hit@5", "MRR");
+    let names = ["keyword (count)", "full-text (q)", "full-text (kw)", "semantic"];
+    for (name, metrics) in names.iter().zip(&metrics) {
         println!(
-            "{:<12} {:>6.2} {:>7.2} {:>7.2} {:>7.2}",
+            "{:<16} {:>6.2} {:>7.2} {:>7.2} {:>7.2}",
             name,
             metrics.hit1 as f64 / total,
             metrics.hit3 as f64 / total,
