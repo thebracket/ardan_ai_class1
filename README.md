@@ -76,6 +76,7 @@ mdbook build manual
 | [`ex22_mcp_server`](code/ex22_mcp_server) | [A Minimal Server](manual/src/03_mcp_servers/a_minimal_server.md) | A minimal MCP server with `rmcp`, and a self-driving `--demo` |
 | [`ex23_multimodal`](code/ex23_multimodal) | [Multimodal Input](manual/src/02_llm_call/multimodal.md) | Sending a picture alongside a text prompt, and reading the description back |
 | [`ex24_embeddings`](code/ex24_embeddings) | [Searching by Meaning](manual/src/04_rag/searching_by_meaning.md) | Local `fastembed` embeddings, cosine similarity, and a PCA plot of the vectors |
+| [`ex25_text_search`](code/ex25_text_search) | [Keyword Search](manual/src/04_rag/keyword_search.md) | Naive keyword search and SQLite FTS5 over the class-notes corpus |
 
 ## Contents
 

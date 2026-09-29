@@ -1,7 +1,7 @@
 # Keyword Search
 
 > **Draft — planning notes.**
-> Tentatively a small example, `ex25_rag_search` (provisional number).
+> This is in the repo as `ex25_text_search`.
 
 Before embeddings, before indexes: the oldest search there is - look for the word.
 

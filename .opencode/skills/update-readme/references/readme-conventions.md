@@ -82,6 +82,7 @@ Rows follow the order of `[workspace] members` in `code/Cargo.toml`.
 | `ex22_mcp_server` | `03_mcp_servers/a_minimal_server.md` | A minimal MCP server built with the official Rust SDK (`rmcp`) |
 | `ex23_multimodal` | `02_llm_call/multimodal.md` | Sending an image with a text prompt, and reading the description back |
 | `ex24_embeddings` | `04_rag/searching_by_meaning.md`, `04_rag/search_is_a_distance.md` | Local `fastembed` embeddings, cosine similarity, top-k, and a PCA plot |
+| `ex25_text_search` | `04_rag/keyword_search.md`, `04_rag/full_text_search.md` | Corpus loading, naive keyword search, and SQLite FTS5 |
 
 When this table changes, update it here too.
 

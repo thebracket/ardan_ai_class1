@@ -1,7 +1,7 @@
 # Cheap Tags: Keywords from Small Models
 
 > **Draft — planning notes.**
-> Tentatively `ex28_rag_keywords` (provisional number).
+> Tentatively `ex28_keyword_extraction` (provisional number).
 
 Keyword search is cheap and often wins. So what if we make the documents carry *more* and *better*
 keywords than they happen to contain? That is a job a small model can do well - once per chunk, at

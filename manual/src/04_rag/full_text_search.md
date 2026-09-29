@@ -1,7 +1,7 @@
 # Full Text Search
 
 > **Draft — planning notes.**
-> Same example as [Keyword Search](./keyword_search.md) - `ex25_rag_search`.
+> Same example as [Keyword Search](./keyword_search.md) - `ex25_text_search`.
 
 ## Covered Here
 

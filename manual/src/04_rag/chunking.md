@@ -1,7 +1,7 @@
 # Chunking
 
 > **Draft — planning notes.**
-> Same example as [Ingesting a Manual](./ingesting_a_manual.md) - `ex26_rag_ingest`.
+> Same example as [Ingesting a Manual](./ingesting_a_manual.md) - `ex26_vector_search`.
 
 ## Covered Here
 
