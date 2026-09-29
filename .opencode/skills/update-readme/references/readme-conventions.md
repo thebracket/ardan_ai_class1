@@ -80,6 +80,7 @@ Rows follow the order of `[workspace] members` in `code/Cargo.toml`.
 | `ex20_agent` | `05_agents/simple_agent.md` | A goal-driven agent loop over a small notes corpus, with an iteration cap |
 | `ex21_jev` | `05_agents/jev_classifier.md` | Calling Jev for a typed decision, then routing on it in code |
 | `ex22_mcp_server` | `03_mcp_servers/a_minimal_server.md` | A minimal MCP server built with the official Rust SDK (`rmcp`) |
+| `ex23_multimodal` | `02_llm_call/multimodal.md` | Sending an image with a text prompt, and reading the description back |
 
 When this table changes, update it here too.
 

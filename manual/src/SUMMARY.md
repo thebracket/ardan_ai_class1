@@ -20,7 +20,7 @@
     - [A Quick Refactor](./02_llm_call/multi_2.md)
     - [Adding State](./02_llm_call/multi_3.md)
     - [Warning: Unbounded Growth](./02_llm_call/multi_4.md)
-  - [Multimodal Input]()
+  - [Multimodal Input](./02_llm_call/multimodal.md)
   - [Tool Use](./02_llm_call/tools_1.md)
     - [Hard-Coded Tool](./02_llm_call/tools_2.md)
     - [Generic Tool Calls](./02_llm_call/tools_3.md)

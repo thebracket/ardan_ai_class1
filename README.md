@@ -74,6 +74,7 @@ mdbook build manual
 | [`ex20_agent`](code/ex20_agent) | [A Very Simple Agent](manual/src/05_agents/simple_agent.md) | A goal-driven agent loop over a small notes corpus, with an iteration cap |
 | [`ex21_jev`](code/ex21_jev) | [A Jev Classifier in Rust](manual/src/05_agents/jev_classifier.md) | Calling Jev for a typed decision, then routing on it in code |
 | [`ex22_mcp_server`](code/ex22_mcp_server) | [A Minimal Server](manual/src/03_mcp_servers/a_minimal_server.md) | A minimal MCP server with `rmcp`, and a self-driving `--demo` |
+| [`ex23_multimodal`](code/ex23_multimodal) | [Multimodal Input](manual/src/02_llm_call/multimodal.md) | Sending a picture alongside a text prompt, and reading the description back |
 
 ## Contents
 
@@ -99,7 +100,7 @@ The full table of contents is [`manual/src/SUMMARY.md`](manual/src/SUMMARY.md).
     - [A Quick Refactor](manual/src/02_llm_call/multi_2.md)
     - [Adding State](manual/src/02_llm_call/multi_3.md)
     - [Warning: Unbounded Growth](manual/src/02_llm_call/multi_4.md)
-  - Multimodal Input (placeholder)
+  - [Multimodal Input](manual/src/02_llm_call/multimodal.md)
   - [Tool Use](manual/src/02_llm_call/tools_1.md)
     - [Hard-Coded Tool](manual/src/02_llm_call/tools_2.md)
     - [Generic Tool Calls](manual/src/02_llm_call/tools_3.md)
