@@ -49,5 +49,8 @@ We'll ingest only the prose, not the code. That gives us a natural trap for free
 forever saying "the code for this is in the `code/...` folder", and the model can't see that folder.
 Watch it cheerfully invent the code it can't read.
 
+So the examples run without cloning anything: `code/rag_corpus/` holds one shared sample of the notes,
+and every RAG example points at it. Set `RUST_NOTES_DIR` to search a full checkout instead.
+
 The model lives on your machine: everything here uses `fastembed` for embeddings, sparse vectors, and
 reranking. The only thing that talks to OpenRouter is the chat model at the end.

@@ -44,7 +44,10 @@ fn corpus_root() -> Result<PathBuf> {
     if let Ok(dir) = std::env::var(CORPUS_ENV) {
         return Ok(PathBuf::from(dir));
     }
-    Ok(PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("corpus"))
+    // The sample corpus lives once, in code/rag_corpus.
+    Ok(PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+        .join("..")
+        .join("rag_corpus"))
 }
 
 fn collect_markdown_files(dir: &Path, files: &mut Vec<PathBuf>) -> Result<()> {
@@ -281,6 +284,9 @@ fn main() -> Result<()> {
             root.display()
         );
     }
+
+    // Resolve any `..` so the paths we print are tidy.
+    let root = fs::canonicalize(&root).unwrap_or(root);
 
     let output_dir = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("output");
     fs::create_dir_all(&output_dir)?;

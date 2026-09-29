@@ -13,7 +13,8 @@
 code/
   Cargo.toml            # workspace; every exNN crate is a member
   .env                  # local only, gitignored: shared OPENROUTER_KEY
-  ex01_hello/ ... ex22_mcp_server/
+  rag_corpus/           # shared sample corpus for the RAG examples
+  ex01_hello/ ... ex27_rag_chat/
     Cargo.toml
     src/main.rs         # some also have src/chatbot.rs
 manual/

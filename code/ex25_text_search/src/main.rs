@@ -10,7 +10,7 @@ const TOP_K: usize = 5;
 const DEFAULT_QUERY: &str = "memory leak";
 
 // Set this to a checkout of the Ultimate Rust Foundations notes to search the
-// full corpus instead of the small sample bundled next to this crate.
+// full corpus instead of the small shared sample in `code/rag_corpus`.
 const CORPUS_ENV: &str = "RUST_NOTES_DIR";
 
 struct Document {
@@ -22,7 +22,10 @@ fn corpus_root() -> Result<PathBuf> {
     if let Ok(dir) = std::env::var(CORPUS_ENV) {
         return Ok(PathBuf::from(dir));
     }
-    Ok(PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("corpus"))
+    // The sample corpus lives once, in code/rag_corpus.
+    Ok(PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+        .join("..")
+        .join("rag_corpus"))
 }
 
 // Walk a directory tree, collecting markdown files. We deliberately skip the
@@ -138,6 +141,9 @@ fn main() -> Result<()> {
             root.display()
         );
     }
+
+    // Resolve any `..` so the paths we print are tidy.
+    let root = fs::canonicalize(&root).unwrap_or(root);
 
     let documents = load_documents(&root)?;
     println!("Loaded {} markdown files from {}", documents.len(), root.display());
