@@ -84,6 +84,7 @@ Rows follow the order of `[workspace] members` in `code/Cargo.toml`.
 | `ex24_embeddings` | `04_rag/searching_by_meaning.md`, `04_rag/search_is_a_distance.md` | Local `fastembed` embeddings, cosine similarity, top-k, and a PCA plot |
 | `ex25_text_search` | `04_rag/keyword_search.md`, `04_rag/full_text_search.md` | Corpus loading, naive keyword search, and SQLite FTS5 |
 | `ex26_vector_search` | `04_rag/ingesting_a_manual.md`, `04_rag/chunking.md` | Heading-aware markdown chunking, embeddings stored as SQLite BLOBs, cosine search |
+| `ex27_rag_chat` | `04_rag/rag_as_a_tool.md` | A `read_docs` tool wiring the vector index into the chat loop |
 
 When this table changes, update it here too.
 
