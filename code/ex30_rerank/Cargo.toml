@@ -1,0 +1,9 @@
+[package]
+name = "ex30_rerank"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.104"
+fastembed = { version = "7.1.0", default-features = false, features = ["hf-hub-native-tls", "ort-download-binaries-native-tls"] }
+rusqlite = { version = "0.40.2", features = ["bundled"] }

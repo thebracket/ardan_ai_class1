@@ -87,6 +87,7 @@ Rows follow the order of `[workspace] members` in `code/Cargo.toml`.
 | `ex27_rag_chat` | `04_rag/rag_as_a_tool.md` | A `read_docs` tool wiring the vector index into the chat loop |
 | `ex28_retrieval_eval` | `04_rag/evaluating_rag.md` | hit@k / MRR scoreboard comparing keyword, full-text and semantic retrieval |
 | `ex29_hybrid_search` | `04_rag/hybrid_search.md` | Reciprocal rank fusion combining BM25 and embedding rankings |
+| `ex30_rerank` | `04_rag/reranking.md` | A cross-encoder reranking the fused candidate shortlist |
 
 When this table changes, update it here too.
 
