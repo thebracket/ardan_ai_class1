@@ -12,6 +12,10 @@ const MODEL_INPUT_PREFIX: &str = "query: ";
 
 const MODEL: EmbeddingModel = EmbeddingModel::MultilingualE5Small;
 
+// Queries we run against the little sample set to show ranking. None of these
+// words appear in the samples - that's the whole point.
+const QUERIES: [&str; 4] = ["kitty", "un perro", "a place to live", "こんにちは"];
+
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 enum WordGroup {
     Cat,
@@ -255,6 +259,47 @@ fn print_similarity_table(points: &[Point]) {
     }
 }
 
+// This is the entire search algorithm: score every vector against the query,
+// sort, keep the best k. "Top-k" just means "the k closest matches".
+fn top_k<'a>(query: &[f32], points: &'a [Point], k: usize) -> Vec<(f64, &'a Point)> {
+    let mut scored = points
+        .iter()
+        .map(|point| (cosine_similarity(query, &point.embedding), point))
+        .collect::<Vec<_>>();
+    scored.sort_by(|left, right| right.0.partial_cmp(&left.0).unwrap());
+    scored.truncate(k);
+    scored
+}
+
+fn print_search_results(
+    model: &mut TextEmbedding,
+    points: &[Point],
+    queries: &[&str],
+    k: usize,
+) -> Result<()> {
+    let model_inputs = queries
+        .iter()
+        .map(|query| model_input(query))
+        .collect::<Vec<_>>();
+    let query_embeddings = model.embed(model_inputs, None)?;
+
+    for (query, embedding) in queries.iter().zip(query_embeddings) {
+        println!();
+        println!("Top {k} matches for {query:?}:");
+        for (rank, (score, point)) in top_k(&embedding, points, k).iter().enumerate() {
+            println!(
+                "  {}. {:.4}  {} ({})",
+                rank + 1,
+                score,
+                point.sample.text,
+                point.sample.language
+            );
+        }
+    }
+
+    Ok(())
+}
+
 fn main() -> Result<()> {
     let output_dir = output_dir();
     fs::create_dir_all(&output_dir)
@@ -298,6 +343,7 @@ fn main() -> Result<()> {
     print_tokenization(&model, &samples, &model_inputs);
     println!();
     print_similarity_table(&points);
+    print_search_results(&mut model, &points, &QUERIES, 5)?;
 
     let plot_path = output_dir.join("embeddings.svg");
     write_plot(&plot_path, &points)?;
